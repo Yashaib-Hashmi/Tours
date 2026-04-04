@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tours Project | Premium Travel Agency</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Swiper Slider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    
+    <!-- Flatpickr Date Picker -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader-inner"></div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Tours <span>Project</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="destinations.html">Destinations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="packages.html">Packages</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="dashboard.html"><i class="fas fa-user-shield"></i> Admin</a></li>
+                </ul>
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-slider">
+            <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');"></div>
+            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');"></div>
+            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');"></div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1>Explore the World with Tours Project</h1>
+                <p>Premium travel experiences curated for the modern adventurer. Discover hidden gems and luxury escapes across the globe.</p>
+                <a href="#packages" class="btn-premium">Start Your Journey</a>
+                
+                <!-- Booking Form -->
+                <div class="booking-form-container">
+                    <form class="booking-form row g-3">
+                        <div class="col-md-3 position-relative">
+                            <input type="text" id="destinationSearch" class="form-control" placeholder="Where to?" autocomplete="off">
+                            <div id="autocomplete-list" class="autocomplete-suggestions"></div>
+                        </div>
+                        <div class="col-md-3">
+                            <input type="text" id="bookingDate" class="form-control" placeholder="When?">
+                        </div>
+                        <div class="col-md-3">
+                            <select class="form-select">
+                                <option selected disabled>Travelers</option>
+                                <option>1 Person</option>
+                                <option>2 Persons</option>
+                                <option>3+ Persons</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <button type="submit" class="btn btn-premium w-100">Search</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destinations Section -->
+    <section id="destinations" class="destinations">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Top Destinations</h2>
+                <p>Handpicked locations that offer unique experiences and breathtaking views.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="travel-card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Santorini">
+                            <div class="card-overlay">
+                                <div>
+                                    <h3 class="text-white">Santorini, Greece</h3>
+                                    <p class="text-white-50">Iconic white buildings and blue domes.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="travel-card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1524413840807-0c3cb6fa808d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Kyoto">
+                            <div class="card-overlay">
+                                <div>
+                                    <h3 class="text-white">Kyoto, Japan</h3>
+                                    <p class="text-white-50">Traditional temples and serene gardens.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="travel-card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Bali">
+                            <div class="card-overlay">
+                                <div>
+                                    <h3 class="text-white">Bali, Indonesia</h3>
+                                    <p class="text-white-50">Tropical paradise and vibrant culture.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="destinations.html" class="btn btn-outline-primary rounded-pill px-5 py-3">View All Destinations</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section id="packages" class="packages bg-light">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Travel Packages</h2>
+                <p>Exclusive deals designed to give you the best value for your adventure.</p>
+            </div>
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-4" data-aos="fade-right">
+                    <div class="travel-card" 
+                         data-included="Guided Hiking,Camping Equipment,Professional Guide,Meals" 
+                         data-exclusions="Travel Insurance,Personal Expenses,Flight Tickets">
+                        <div class="card-body">
+                            <i class="fas fa-mountain fa-3x mb-4 text-primary"></i>
+                            <h3>Adventure Pack</h3>
+                            <p class="text-muted">Perfect for thrill-seekers looking for hiking and outdoor activities.</p>
+                            <ul class="list-unstyled mb-4">
+                                <li><i class="fas fa-check text-success me-2"></i> 5 Days / 4 Nights</li>
+                                <li><i class="fas fa-check text-success me-2"></i> Guided Hiking Tours</li>
+                                <li><i class="fas fa-check text-success me-2"></i> Equipment Included</li>
+                            </ul>
+                            <div class="card-price mb-4">$899</div>
+                            <a href="#" class="btn btn-premium w-100">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4" data-aos="fade-up">
+                    <div class="travel-card featured-package" 
+                         data-included="5-Star Resort,Private Villa,Gourmet Dining,Private Chauffeur" 
+                         data-exclusions="International Flights,Visa Fees,Tips">
+                        <span class="featured-badge">Best Value</span>
+                        <div class="card-body">
+                            <i class="fas fa-crown fa-3x mb-4 text-primary"></i>
+                            <h3>Luxury Escape</h3>
+                            <p class="text-muted">Indulge in 5-star resorts and private tours in the most beautiful places.</p>
+                            <ul class="list-unstyled mb-4">
+                                <li><i class="fas fa-check text-success me-2"></i> 7 Days / 6 Nights</li>
+                                <li><i class="fas fa-check text-success me-2"></i> Private Villa Stay</li>
+                                <li><i class="fas fa-check text-success me-2"></i> Gourmet Dining</li>
+                            </ul>
+                            <div class="card-price mb-4">$2,499</div>
+                            <a href="#" class="btn btn-premium w-100">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4" data-aos="fade-left">
+                    <div class="travel-card" 
+                         data-included="Beachfront Resort,Water Sports,Spa Access,All Meals & Drinks" 
+                         data-exclusions="Airport Transfers,Optional Excursions,Laundry Services">
+                        <div class="card-body">
+                            <i class="fas fa-umbrella-beach fa-3x mb-4 text-primary"></i>
+                            <h3>Beach Retreat</h3>
+                            <p class="text-muted">Relax and unwind on pristine beaches with all-inclusive amenities.</p>
+                            <ul class="list-unstyled mb-4">
+                                <li><i class="fas fa-check text-success me-2"></i> 6 Days / 5 Nights</li>
+                                <li><i class="fas fa-check text-success me-2"></i> All-Inclusive Resort</li>
+                                <li><i class="fas fa-check text-success me-2"></i> Water Sports Access</li>
+                            </ul>
+                            <div class="card-price mb-4">$1,299</div>
+                            <a href="#" class="btn btn-premium w-100">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Our Services</h2>
+                <p>We provide a wide range of services to ensure your trip is perfect from start to finish.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-box">
+                        <i class="fas fa-hotel"></i>
+                        <h3>Hotel Booking</h3>
+                        <p>Access to over 1 million hotels worldwide with exclusive rates.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-box">
+                        <i class="fas fa-plane"></i>
+                        <h3>Flight Tickets</h3>
+                        <p>Seamless flight booking with all major airlines and flexible dates.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-box">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <h3>Tour Guides</h3>
+                        <p>Professional local guides to show you the true heart of every city.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-box">
+                        <i class="fas fa-car"></i>
+                        <h3>Car Rentals</h3>
+                        <p>Luxury and economy car rentals available at your destination.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="about-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="About Us">
+                    </div>
+                </div>
+                <div class="col-lg-6 ps-lg-5" data-aos="fade-left">
+                    <div class="section-title text-start mb-4">
+                        <h2>About Tours Project</h2>
+                    </div>
+                    <p class="lead mb-4">We are a team of passionate travelers dedicated to creating unforgettable experiences for our clients.</p>
+                    <p class="text-muted mb-5">With over 15 years of experience in the travel industry, we have built a network of partners that allow us to provide unique and high-quality tours that you won't find anywhere else.</p>
+                    <div class="row g-4">
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-award fa-2x text-primary me-3"></i>
+                                <div>
+                                    <h4 class="mb-0">15+</h4>
+                                    <small>Years Experience</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-users fa-2x text-primary me-3"></i>
+                                <div>
+                                    <h4 class="mb-0">50k+</h4>
+                                    <small>Happy Clients</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="about.html" class="btn btn-premium mt-5">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>What Our Clients Say</h2>
+                <p>Real stories from real travelers who have explored the world with us.</p>
+            </div>
+            <div class="swiper testimonialSwiper" data-aos="fade-up">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <img src="https://i.pravatar.cc/150?u=1" alt="User" class="testimonial-img">
+                            <p class="mb-4">"The best travel agency I've ever used. Everything was perfectly organized, and the luxury villa in Bali was beyond my expectations."</p>
+                            <h4 class="mb-1">Sarah Johnson</h4>
+                            <small class="text-primary">Adventure Enthusiast</small>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <img src="https://i.pravatar.cc/150?u=2" alt="User" class="testimonial-img">
+                            <p class="mb-4">"Tours Project made our honeymoon truly special. The private tours in Santorini were romantic and informative. Highly recommend!"</p>
+                            <h4 class="mb-1">Michael Chen</h4>
+                            <small class="text-primary">Luxury Traveler</small>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <img src="https://i.pravatar.cc/150?u=3" alt="User" class="testimonial-img">
+                            <p class="mb-4">"I loved the Adventure Pack! The hiking trails in Kyoto were stunning, and the guides were very professional and friendly."</p>
+                            <h4 class="mb-1">Emma Wilson</h4>
+                            <small class="text-primary">Solo Backpacker</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="section-title text-start mb-4">
+                        <h2>Get In Touch</h2>
+                        <p>Have questions or ready to book your next adventure? Contact us today!</p>
+                    </div>
+                    <div class="contact-info mb-5">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="icon-box bg-white p-3 rounded-circle shadow-sm me-4">
+                                <i class="fas fa-map-marker-alt text-primary"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-0">Our Office</h5>
+                                <p class="text-muted mb-0">123 Travel Lane, Adventure City, World</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="icon-box bg-white p-3 rounded-circle shadow-sm me-4">
+                                <i class="fas fa-phone text-primary"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-0">Call Us</h5>
+                                <p class="text-muted mb-0">+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="icon-box bg-white p-3 rounded-circle shadow-sm me-4">
+                                <i class="fas fa-envelope text-primary"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-0">Email Us</h5>
+                                <p class="text-muted mb-0">info@toursproject.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="card border-0 shadow-lg rounded-4 p-4">
+                        <form class="contact-form">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Your Name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control" placeholder="Your Email" required>
+                                </div>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Subject">
+                            <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                            <button type="submit" class="btn btn-premium w-100">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <a class="footer-logo" href="#">Tours <span>Project</span></a>
+                    <p class="text-muted">Creating premium travel experiences since 2011. Your journey starts here.</p>
+                </div>
+                <div class="col-lg-2">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="packages.html">Packages</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2">
+                    <h5 class="mb-4">Support</h5>
+                    <ul class="footer-links">
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="mb-4">Newsletter</h5>
+                    <p class="text-muted">Subscribe to get the latest travel news and exclusive offers.</p>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control bg-white border-0" placeholder="Email Address">
+                        <button class="btn btn-primary" type="button">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-5 opacity-10">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2026 Tours Project. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Booking Modal -->
+    <div class="modal fade" id="bookingModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content border-0 shadow-lg rounded-4 overflow-hidden">
+                <div class="row g-0">
+                    <div class="col-lg-5 d-none d-lg-block bg-primary p-5 text-white d-flex flex-column justify-content-center">
+                        <div class="modal-package-info">
+                            <i id="modalIcon" class="fas fa-globe fa-4xl mb-4 opacity-75"></i>
+                            <h2 id="modalTitle" class="mb-3 text-white">Package Name</h2>
+                            <p id="modalDesc" class="opacity-75 mb-4">Package description goes here.</p>
+                            
+                            <div class="mb-4">
+                                <h6 class="text-white fw-bold mb-2"><i class="fas fa-check-circle me-2"></i>Included Activities</h6>
+                                <ul id="modalIncluded" class="list-unstyled small opacity-75">
+                                    <!-- Activities will be injected here -->
+                                </ul>
+                            </div>
+
+                            <div class="mb-4">
+                                <h6 class="text-white fw-bold mb-2"><i class="fas fa-times-circle me-2"></i>Exclusions</h6>
+                                <ul id="modalExclusions" class="list-unstyled small opacity-75">
+                                    <!-- Exclusions will be injected here -->
+                                </ul>
+                            </div>
+
+                            <div class="h3 mb-0" id="modalPrice">$0</div>
+                            <p class="small opacity-50">Per person / All inclusive</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 p-4 p-md-5 bg-card">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <h4 class="mb-0">Complete Your Booking</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <form id="modalBookingForm" class="row g-3">
+                            <input type="hidden" id="modalPackageInput" name="package_name">
+                            <div class="col-12">
+                                <label class="form-label small fw-bold">Full Name</label>
+                                <input type="text" class="form-control" placeholder="John Doe" required>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label small fw-bold">Email Address</label>
+                                <input type="email" class="form-control" placeholder="john@example.com" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label small fw-bold">Travel Date</label>
+                                <input type="text" id="modalBookingDate" class="form-control" placeholder="Select Date" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label small fw-bold">Travelers</label>
+                                <select class="form-select">
+                                    <option value="1">1 Person</option>
+                                    <option value="2">2 Persons</option>
+                                    <option value="3">3+ Persons</option>
+                                </select>
+                            </div>
+                            <div class="col-12 mt-4">
+                                <button type="submit" class="btn btn-premium w-100">Confirm Booking</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top -->
+    <button id="backToTop"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

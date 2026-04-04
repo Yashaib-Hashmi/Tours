@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Packages | Tours Project</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="preloader"><div class="loader-inner"></div></div>
+    <div class="cursor-dot"></div>
+    <div class="cursor-follower"></div>
+
+    <nav class="navbar navbar-expand-lg fixed-top scrolled">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Tours <span>Project</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="destinations.html">Destinations</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="packages.html">Packages</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <button class="theme-toggle" id="themeToggle"><i class="fas fa-moon"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-mini" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); height: 50vh; background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; color: #fff; text-align: center;">
+        <div class="container">
+            <h1 style="font-size: 4rem;">Travel Packages</h1>
+            <p class="lead">Exclusive deals for your next adventure.</p>
+        </div>
+    </section>
+
+    <section class="packages-grid">
+        <div class="container">
+            <!-- Filters -->
+            <div class="filter-container mb-5 p-4 rounded-4 shadow-sm bg-white" data-aos="fade-up">
+                <div class="row g-3 align-items-end">
+                    <div class="col-lg-3 col-md-6">
+                        <label class="form-label fw-bold">Travel Type</label>
+                        <select class="form-select filter-type">
+                            <option value="all">All Types</option>
+                            <option value="adventure">Adventure</option>
+                            <option value="luxury">Luxury</option>
+                            <option value="beach">Beach</option>
+                            <option value="city">City</option>
+                            <option value="heritage">Heritage</option>
+                            <option value="safari">Safari</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <label class="form-label fw-bold">Max Price: <span id="priceDisplay">$3000</span></label>
+                        <input type="range" class="form-range filter-price" min="500" max="3000" step="100" value="3000">
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <label class="form-label fw-bold">Min Duration (Days)</label>
+                        <select class="form-select filter-duration">
+                            <option value="0">Any Duration</option>
+                            <option value="3">3+ Days</option>
+                            <option value="5">5+ Days</option>
+                            <option value="7">7+ Days</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <button class="btn btn-premium w-100" id="resetFilters">Reset Filters</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4" id="packagesGrid">
+                <div class="col-lg-4 col-md-6 travel-card-item" data-price="899" data-duration="5" data-type="adventure" data-aos="fade-up" data-aos-delay="100">
+                    <div class="travel-card" 
+                         data-included="Guided Hiking,Camping Equipment,Professional Guide,Meals" 
+                         data-exclusions="Travel Insurance,Personal Expenses,Flight Tickets">
+                        <div class="card-body">
+                            <i class="fas fa-mountain fa-3x mb-4 text-primary"></i>
+                            <h3>Adventure Pack</h3>
+                            <p class="text-muted">Embark on an adrenaline-fueled journey through rugged terrains and breathtaking mountain ranges. This package is specifically designed for thrill-seekers who crave guided hiking expeditions and immersive outdoor activities. Experience the raw beauty of nature while our professional guides ensure your safety and provide expert local knowledge.</p>
+                            <div class="card-price mb-4">$899</div>
+                            <a href="#" class="btn btn-premium w-100">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 travel-card-item" data-price="2499" data-duration="7" data-type="luxury" data-aos="fade-up" data-aos-delay="200">
+                    <div class="travel-card featured-package" 
+                         data-included="5-Star Resort,Private Villa,Gourmet Dining,Private Chauffeur" 
+                         data-exclusions="International Flights,Visa Fees,Tips">
+                        <span class="featured-badge">Best Value</span>
+                        <div class="card-body">
+                            <i class="fas fa-crown fa-3x mb-4 text-primary"></i>
+                            <h3>Luxury Escape</h3>
+                            <p class="text-muted">Treat yourself to the pinnacle of sophistication with our exclusive luxury retreats in the world's most stunning locations. You will stay in handpicked 5-star resorts and private villas, enjoying gourmet dining experiences tailored to your palate. Our private chauffeurs and expert tour guides will ensure every moment of your escape is seamless, opulent, and truly unforgettable.</p>
+                            <div class="card-price mb-4">$2,499</div>
+                            <a href="#" class="btn btn-premium w-100">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 travel-card-item" data-price="1299" data-duration="6" data-type="beach" data-aos="fade-up" data-aos-delay="300">
+                    <div class="travel-card" 
+                         data-included="Beachfront Resort,Water Sports,Spa Access,All Meals & Drinks" 
+                         data-exclusions="Airport Transfers,Optional Excursions,Laundry Services">
+                        <div class="card-body">
+                            <i class="fas fa-umbrella-beach fa-3x mb-4 text-primary"></i>
+                            <h3>Beach Retreat</h3>
+                            <p class="text-muted">Escape to a tropical paradise where crystal-clear waters meet pristine white sands for the ultimate relaxation experience. This all-inclusive retreat offers premium beachfront accommodations, exciting water sports, and unlimited access to world-class spa facilities. Unwind under the sun with curated cocktails and gourmet meals, leaving all your worries behind in this coastal sanctuary.</p>
+                            <div class="card-price mb-4">$1,299</div>
+                            <a href="#" class="btn btn-premium w-100">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 travel-card-item" data-price="1099" data-duration="4" data-type="city" data-aos="fade-up" data-aos-delay="400">
+                    <div class="travel-card" 
+                         data-included="City Center Hotel,Guided Walking Tour,Museum Passes,Public Transport Pass" 
+                         data-exclusions="Meals,Personal Shopping,Flight Tickets">
+                        <div class="card-body">
+                            <i class="fas fa-city fa-3x mb-4 text-primary"></i>
+                            <h3>City Explorer</h3>
+                            <p class="text-muted">Immerse yourself in the heartbeat of the world's most iconic metropolises with our comprehensive city exploration package. Stay in centrally located boutique hotels and enjoy guided walking tours that reveal hidden gems and historical landmarks. With included museum passes and public transport access, you'll have the freedom to discover the unique culture, art, and culinary delights of each urban destination.</p>
+                            <div class="card-price mb-4">$1,099</div>
+                            <a href="#" class="btn btn-premium w-100">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 travel-card-item" data-price="1599" data-duration="8" data-type="heritage" data-aos="fade-up" data-aos-delay="500">
+                    <div class="travel-card" 
+                         data-included="Heritage Hotel Stay,Historical Site Entry,Cultural Workshops,Local Transport" 
+                         data-exclusions="International Flights,Insurance,Alcoholic Beverages">
+                        <div class="card-body">
+                            <i class="fas fa-history fa-3x mb-4 text-primary"></i>
+                            <h3>Heritage Tour</h3>
+                            <p class="text-muted">Journey back in time to explore the fascinating legacies of ancient civilizations and architectural wonders. This heritage tour provides exclusive entry to historical sites and immersive cultural workshops led by local experts. Stay in authentic heritage hotels that reflect the region's history, offering a unique and educational perspective on the traditions that shaped our world.</p>
+                            <div class="card-price mb-4">$1,599</div>
+                            <a href="#" class="btn btn-premium w-100">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 travel-card-item" data-price="1899" data-duration="10" data-type="safari" data-aos="fade-up" data-aos-delay="600">
+                    <div class="travel-card" 
+                         data-included="Luxury Tent Stay,Daily Game Drives,Expert Ranger,All Meals" 
+                         data-exclusions="Park Fees,Alcoholic Drinks,Personal Gear">
+                        <div class="card-body">
+                            <i class="fas fa-camera-retro fa-3x mb-4 text-primary"></i>
+                            <h3>Photo Safari</h3>
+                            <p class="text-muted">Witness the majesty of the wild through your lens on an extraordinary photographic expedition across vast savannahs. Our expert rangers will lead you on daily game drives to capture breathtaking shots of the 'Big Five' and rare wildlife in their natural habitats. Relax in luxury tented camps under the stars, sharing stories and reviewing your stunning captures from a day of unparalleled adventure.</p>
+                            <div class="card-price mb-4">$1,899</div>
+                            <a href="#" class="btn btn-premium w-100">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <a class="footer-logo" href="#">Tours <span>Project</span></a>
+                    <p class="text-muted">Creating premium travel experiences since 2011. Your journey starts here.</p>
+                </div>
+                <div class="col-lg-2">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="packages.html">Packages</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2">
+                    <h5 class="mb-4">Support</h5>
+                    <ul class="footer-links">
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="mb-4">Newsletter</h5>
+                    <p class="text-muted">Subscribe to get the latest travel news and exclusive offers.</p>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control bg-white border-0" placeholder="Email Address">
+                        <button class="btn btn-primary" type="button">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-5 opacity-10">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2026 Tours Project. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Booking Modal -->
+    <div class="modal fade" id="bookingModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content border-0 shadow-lg rounded-4 overflow-hidden">
+                <div class="row g-0">
+                    <div class="col-lg-5 d-none d-lg-block bg-primary p-5 text-white d-flex flex-column justify-content-center">
+                        <div class="modal-package-info text-center">
+                            <i id="modalIcon" class="fas fa-globe fa-4x mb-4 opacity-75"></i>
+                            <h2 id="modalTitle" class="mb-3 text-white">Package Name</h2>
+                            <p id="modalDesc" class="opacity-75 mb-4">Package description goes here.</p>
+
+                            <div class="mb-4 text-start">
+                                <h6 class="text-white fw-bold mb-2"><i class="fas fa-check-circle me-2"></i>Included Activities</h6>
+                                <ul id="modalIncluded" class="list-unstyled small opacity-75">
+                                    <!-- Activities will be injected here -->
+                                </ul>
+                            </div>
+
+                            <div class="mb-4 text-start">
+                                <h6 class="text-white fw-bold mb-2"><i class="fas fa-times-circle me-2"></i>Exclusions</h6>
+                                <ul id="modalExclusions" class="list-unstyled small opacity-75">
+                                    <!-- Exclusions will be injected here -->
+                                </ul>
+                            </div>
+
+                            <div class="h3 mb-0" id="modalPrice">$0</div>
+                            <p class="small opacity-50">Per person / All inclusive</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 p-4 p-md-5 bg-card">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <h4 class="mb-0">Complete Your Booking</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <form id="modalBookingForm" class="row g-3">
+                            <input type="hidden" id="modalPackageInput" name="package_name">
+                            <div class="col-12">
+                                <label class="form-label small fw-bold">Full Name</label>
+                                <input type="text" class="form-control" placeholder="John Doe" required>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label small fw-bold">Email Address</label>
+                                <input type="email" class="form-control" placeholder="john@example.com" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label small fw-bold">Travel Date</label>
+                                <input type="text" id="modalBookingDate" class="form-control" placeholder="Select Date" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label small fw-bold">Travelers</label>
+                                <select class="form-select">
+                                    <option value="1">1 Person</option>
+                                    <option value="2">2 Persons</option>
+                                    <option value="3">3+ Persons</option>
+                                </select>
+                            </div>
+                            <div class="col-12 mt-4">
+                                <button type="submit" class="btn btn-premium w-100">Confirm Booking</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

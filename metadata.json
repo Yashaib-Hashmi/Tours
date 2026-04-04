@@ -1,0 +1,7 @@
+{
+  "name": "Remix: Tours Project - Premium Travel Agency",
+  "description": "A high-end, modern travel agency website with advanced animations, dark mode, and a comprehensive booking system.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}

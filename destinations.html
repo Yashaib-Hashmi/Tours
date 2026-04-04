@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations | Tours Project</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="preloader"><div class="loader-inner"></div></div>
+    <div class="cursor-dot"></div>
+    <div class="cursor-follower"></div>
+
+    <nav class="navbar navbar-expand-lg fixed-top scrolled">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Tours <span>Project</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="destinations.html">Destinations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="packages.html">Packages</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <button class="theme-toggle" id="themeToggle"><i class="fas fa-moon"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-mini" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); height: 50vh; background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; color: #fff; text-align: center;">
+        <div class="container">
+            <h1 style="font-size: 4rem;">Our Destinations</h1>
+            <p class="lead">Explore the most beautiful places on Earth.</p>
+        </div>
+    </section>
+
+    <section class="destinations-grid">
+        <div class="container">
+            <!-- Filters -->
+            <div class="filter-container mb-5 p-4 rounded-4 shadow-sm bg-white" data-aos="fade-up">
+                <div class="row g-3 align-items-end">
+                    <div class="col-lg-3 col-md-6">
+                        <label class="form-label fw-bold">Travel Type</label>
+                        <select class="form-select filter-type">
+                            <option value="all">All Types</option>
+                            <option value="adventure">Adventure</option>
+                            <option value="luxury">Luxury</option>
+                            <option value="beach">Beach</option>
+                            <option value="city">City</option>
+                            <option value="heritage">Heritage</option>
+                            <option value="safari">Safari</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <label class="form-label fw-bold">Max Price: <span id="priceDisplay">$2000</span></label>
+                        <input type="range" class="form-range filter-price" min="500" max="2000" step="100" value="2000">
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <label class="form-label fw-bold">Min Duration (Days)</label>
+                        <select class="form-select filter-duration">
+                            <option value="0">Any Duration</option>
+                            <option value="3">3+ Days</option>
+                            <option value="5">5+ Days</option>
+                            <option value="7">7+ Days</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <button class="btn btn-premium w-100" id="resetFilters">Reset Filters</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4" id="destinationsGrid">
+                <div class="col-lg-4 col-md-6 travel-card-item" data-price="1200" data-duration="5" data-type="beach" data-aos="fade-up" data-aos-delay="100">
+                    <div class="travel-card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Santorini">
+                            <div class="card-overlay">
+                                <div><h3 class="text-white">Santorini, Greece</h3><p class="text-white-50">Iconic white buildings and blue domes.</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 travel-card-item" data-price="1500" data-duration="7" data-type="heritage" data-aos="fade-up" data-aos-delay="200">
+                    <div class="travel-card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1524413840807-0c3cb6fa808d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Kyoto">
+                            <div class="card-overlay">
+                                <div><h3 class="text-white">Kyoto, Japan</h3><p class="text-white-50">Traditional temples and serene gardens.</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 travel-card-item" data-price="900" data-duration="6" data-type="adventure" data-aos="fade-up" data-aos-delay="300">
+                    <div class="travel-card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Bali">
+                            <div class="card-overlay">
+                                <div><h3 class="text-white">Bali, Indonesia</h3><p class="text-white-50">Tropical paradise and vibrant culture.</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 travel-card-item" data-price="800" data-duration="4" data-type="adventure" data-aos="fade-up" data-aos-delay="400">
+                    <div class="travel-card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Yosemite">
+                            <div class="card-overlay">
+                                <div><h3 class="text-white">Yosemite, USA</h3><p class="text-white-50">Stunning granite cliffs and waterfalls.</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 travel-card-item" data-price="1800" data-duration="7" data-type="luxury" data-aos="fade-up" data-aos-delay="500">
+                    <div class="travel-card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Tuscany">
+                            <div class="card-overlay">
+                                <div><h3 class="text-white">Tuscany, Italy</h3><p class="text-white-50">Rolling hills and world-class vineyards.</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 travel-card-item" data-price="1600" data-duration="5" data-type="city" data-aos="fade-up" data-aos-delay="600">
+                    <div class="travel-card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Venice">
+                            <div class="card-overlay">
+                                <div><h3 class="text-white">Venice, Italy</h3><p class="text-white-50">Romantic canals and historic architecture.</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <a class="footer-logo" href="#">Tours <span>Project</span></a>
+                    <p class="text-muted">Creating premium travel experiences since 2011. Your journey starts here.</p>
+                </div>
+                <div class="col-lg-2">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="packages.html">Packages</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2">
+                    <h5 class="mb-4">Support</h5>
+                    <ul class="footer-links">
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="mb-4">Newsletter</h5>
+                    <p class="text-muted">Subscribe to get the latest travel news and exclusive offers.</p>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control bg-white border-0" placeholder="Email Address">
+                        <button class="btn btn-primary" type="button">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-5 opacity-10">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2026 Tours Project. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
