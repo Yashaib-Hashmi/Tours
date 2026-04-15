@@ -204,71 +204,7 @@
         </div>
     </footer>
 
-    <!-- Booking Modal -->
-    <div class="modal fade" id="bookingModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content border-0 shadow-lg rounded-4 overflow-hidden">
-                <div class="row g-0">
-                    <div class="col-lg-5 d-none d-lg-block bg-primary p-5 text-white d-flex flex-column justify-content-center">
-                        <div class="modal-package-info text-center">
-                            <i id="modalIcon" class="fas fa-globe fa-4x mb-4 opacity-75"></i>
-                            <h2 id="modalTitle" class="mb-3 text-white">Package Name</h2>
-                            <p id="modalDesc" class="opacity-75 mb-4">Package description goes here.</p>
-
-                            <div class="mb-4 text-start">
-                                <h6 class="text-white fw-bold mb-2"><i class="fas fa-check-circle me-2"></i>Included Activities</h6>
-                                <ul id="modalIncluded" class="list-unstyled small opacity-75">
-                                    <!-- Activities will be injected here -->
-                                </ul>
-                            </div>
-
-                            <div class="mb-4 text-start">
-                                <h6 class="text-white fw-bold mb-2"><i class="fas fa-times-circle me-2"></i>Exclusions</h6>
-                                <ul id="modalExclusions" class="list-unstyled small opacity-75">
-                                    <!-- Exclusions will be injected here -->
-                                </ul>
-                            </div>
-
-                            <div class="h3 mb-0" id="modalPrice">$0</div>
-                            <p class="small opacity-50">Per person / All inclusive</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-7 p-4 p-md-5 bg-card">
-                        <div class="d-flex justify-content-between align-items-center mb-4">
-                            <h4 class="mb-0">Complete Your Booking</h4>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <form id="modalBookingForm" class="row g-3">
-                            <input type="hidden" id="modalPackageInput" name="package_name">
-                            <div class="col-12">
-                                <label class="form-label small fw-bold">Full Name</label>
-                                <input type="text" class="form-control" placeholder="John Doe" required>
-                            </div>
-                            <div class="col-12">
-                                <label class="form-label small fw-bold">Email Address</label>
-                                <input type="email" class="form-control" placeholder="john@example.com" required>
-                            </div>
-                            <div class="col-md-6">
-                                <label class="form-label small fw-bold">Travel Date</label>
-                                <input type="text" id="modalBookingDate" class="form-control" placeholder="Select Date" required>
-                            </div>
-                            <div class="col-md-6">
-                                <label class="form-label small fw-bold">Travelers</label>
-                                <select class="form-select">
-                                    <option value="1">1 Person</option>
-                                    <option value="2">2 Persons</option>
-                                    <option value="3">3+ Persons</option>
-                                </select>
-                            </div>
-                            <div class="col-12 mt-4">
-                                <button type="submit" class="btn btn-premium w-100">Confirm Booking</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+ 
 
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
