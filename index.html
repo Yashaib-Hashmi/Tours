@@ -4,162 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lala Zar | Tours & Travel Agency</title>
-   
+    
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-   
+    
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-   
+    
     <!-- AOS Animation -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-   
+    
     <!-- Swiper Slider -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
-   
+    
     <!-- Flatpickr Date Picker -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-   
+    
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
-    
-    <style>
-        /* ====================== RESPONSIVE HERO SECTION ====================== */
-        .hero {
-            min-height: 100vh;
-            position: relative;
-            display: flex;
-            align-items: center;
-            overflow: hidden;
-        }
-
-        .hero-slider, .hero-slide {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-        }
-
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.65));
-            z-index: 1;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            color: white;
-            padding-top: 100px;
-        }
-
-        .hero h1 {
-            font-size: 2.8rem;
-            line-height: 1.2;
-            font-weight: 700;
-        }
-
-        .hero p {
-            font-size: 1.15rem;
-            max-width: 700px;
-        }
-
-        /* Booking Form */
-        .booking-form-container {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 25px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            margin-top: 30px;
-        }
-
-        .booking-form .form-control,
-        .booking-form .form-select {
-            height: 52px;
-            font-size: 1rem;
-        }
-
-        /* Responsive Adjustments */
-        @media (max-width: 992px) {
-            .hero h1 {
-                font-size: 2.4rem;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .hero {
-                min-height: 90vh;
-            }
-            .hero-content {
-                padding-top: 80px;
-                text-align: center;
-            }
-            .hero h1 {
-                font-size: 2.1rem;
-            }
-            .hero p {
-                font-size: 1.05rem;
-            }
-            .booking-form-container {
-                padding: 20px 15px;
-                margin-top: 25px;
-            }
-            .booking-form .col-md-3 {
-                margin-bottom: 12px;
-            }
-            .booking-form .col-md-3:last-child {
-                margin-bottom: 0;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .hero h1 {
-                font-size: 1.9rem;
-            }
-            .booking-form-container {
-                padding: 18px 12px;
-            }
-        }
-
-        /* Other sections improvements */
-        .travel-card img {
-            width: 100%;
-            height: 280px;
-            object-fit: cover;
-        }
-
-        .section-title h2 {
-            font-size: 2.2rem;
-        }
-
-        @media (max-width: 768px) {
-            .section-title h2 {
-                font-size: 1.9rem;
-            }
-        }
-    </style>
 </head>
 <body>
-    <!-- Preloader, Cursor, Navbar (same as your code) -->
+
     <!-- Preloader -->
     <div id="preloader">
         <div class="loader-inner"></div>
     </div>
+
     <!-- Custom Cursor -->
     <div class="cursor-dot"></div>
     <div class="cursor-follower"></div>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top bg-white shadow-sm">
+    <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">Lala Zar <span class="text-primary">Tours & Travel Agency</span></a>
+            <a class="navbar-brand" href="index.html">Lala Zar  <span>Tours & Travel Agency</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -173,14 +51,14 @@
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                     <li class="nav-item"><a class="nav-link" href="dashboard.html"><i class="fas fa-user-shield"></i> Admin</a></li>
                 </ul>
-                <button class="theme-toggle btn btn-sm border-0 ms-3" id="themeToggle">
+                <button class="theme-toggle" id="themeToggle">
                     <i class="fas fa-moon"></i>
                 </button>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section - Fully Responsive -->
+    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-slider">
             <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');"></div>
@@ -188,25 +66,23 @@
             <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');"></div>
         </div>
         <div class="hero-overlay"></div>
-        
         <div class="container">
             <div class="hero-content">
-                <h1>Explore the World with <span class="text-warning">Lala Zar</span> Tours & Travel Agency</h1>
-                <p class="mb-4">Premium travel experiences curated for the modern adventurer. Discover hidden gems and luxury escapes across the globe.</p>
-                
-                <a href="#packages" class="btn btn-premium btn-lg mb-4">Start Your Journey</a>
+                <h1>Explore the World with Lala Zar | Tours & Travel Agency</h1>
+                <p>Premium travel experiences curated for the modern adventurer. Discover hidden gems and luxury escapes across the globe.</p>
+                <a href="#packages" class="btn-premium">Start Your Journey</a>
                 
                 <!-- Booking Form -->
                 <div class="booking-form-container">
                     <form class="booking-form row g-3">
-                        <div class="col-12 col-md-5 col-lg-3 position-relative">
+                        <div class="col-md-3 position-relative">
                             <input type="text" id="destinationSearch" class="form-control" placeholder="Where to?" autocomplete="off">
                             <div id="autocomplete-list" class="autocomplete-suggestions"></div>
                         </div>
-                        <div class="col-12 col-md-3 col-lg-3">
+                        <div class="col-md-3">
                             <input type="text" id="bookingDate" class="form-control" placeholder="When?">
                         </div>
-                        <div class="col-12 col-md-4 col-lg-3">
+                        <div class="col-md-3">
                             <select class="form-select">
                                 <option selected disabled>Travelers</option>
                                 <option>1 Person</option>
@@ -214,7 +90,7 @@
                                 <option>3+ Persons</option>
                             </select>
                         </div>
-                        <div class="col-12 col-lg-3">
+                        <div class="col-md-3">
                             <button type="submit" class="btn btn-premium w-100">Search</button>
                         </div>
                     </form>
@@ -222,7 +98,6 @@
             </div>
         </div>
     </section>
-
     <!-- Destinations Section -->
     <section id="destinations" class="destinations">
         <div class="container">
